@@ -7,6 +7,7 @@ import Foreign.Ptr
 import Foreign.Storable
 
 #include <security/pam_appl.h>
+#include <security/pam_misc.h>
 
 data CPamMessage = CPamMessage { msg_style :: CInt
                                , msg :: CString
@@ -59,3 +60,4 @@ foreign import ccall "security/pam_appl.h pam_start" c_pam_start :: CString -> C
 foreign import ccall "security/pam_appl.h pam_end" c_pam_end :: Ptr CPamHandleT -> CInt -> IO CInt
 foreign import ccall "security/pam_appl.h pam_authenticate" c_pam_authenticate :: Ptr CPamHandleT -> CInt -> IO CInt
 foreign import ccall "security/pam_appl.h pam_acct_mgmt" c_pam_acct_mgmt :: Ptr CPamHandleT -> CInt -> IO CInt
+foreign import ccall "security/pam_misc.h misc_conv" c_misc_conv :: CInt -> Ptr (Ptr ()) -> Ptr (Ptr ()) -> Ptr () -> IO CInt

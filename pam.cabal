@@ -28,6 +28,6 @@ Library
     Hs-Source-Dirs: src
     Ghc-options:    -Wall
 
-    extra-libraries : pam
+    extra-libraries : pam, pam_misc
 
     build-tools: c2hs
