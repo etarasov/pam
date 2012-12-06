@@ -1,3 +1,5 @@
+-- http://www.linux-pam.org/
+-- http://www.linux-pam.org/Linux-PAM-html/Linux-PAM_ADG.html
 
 module System.Posix.PAM where
 
