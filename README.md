@@ -1,4 +1,4 @@
 pam
 ===
 
-Haskell library for pam authorisation using login and password
+Haskell library for pam authentication using login and password

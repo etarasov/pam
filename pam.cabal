@@ -1,10 +1,10 @@
 Name:           pam
-Version:        0.1
-Cabal-Version:  >= 1.2.3
+Version:        0.1.1
+Cabal-Version:  >= 1.6
 Build-type:     Simple
 License:        BSD3
 License-File:   LICENSE
-Copyright:      Copyright (c) 2011 Evgeny Tarasov
+Copyright:      Copyright (c) 2011-2012 Evgeny Tarasov
 Maintainer:     etarasov.ekb@gmail.com
 Stability:      alpha
 Synopsis:       Haskell binding for C PAM API
@@ -12,14 +12,15 @@ Description:    This package provides PAM interface for Haskell programs. It con
 Category:       System
 Tested-with:    GHC==6.12.3
 Extra-source-files: Setup.hs
+Source-repository   head
+    type:   git
+    location: git://github.com/etarasov/pam.git
 
 Library
     exposed-modules: System.Posix.PAM
                      System.Posix.PAM.LowLevel
                      System.Posix.PAM.Types
                      System.Posix.PAM.Internals
-
-    --other-modules:   System.Posix.PAM.Internals
 
     extensions: ForeignFunctionInterface
 
